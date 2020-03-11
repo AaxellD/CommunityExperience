@@ -2,7 +2,7 @@
   "name": "CommunityExperience",
   "version": "1.0.0",
   "description": "Blog of user experiences... combining yelp and pernal blogs",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
