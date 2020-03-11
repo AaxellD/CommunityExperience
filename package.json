@@ -1,0 +1,29 @@
+{
+  "name": "CommunityExperience",
+  "version": "1.0.0",
+  "description": "Blog of user experiences... combining yelp and pernal blogs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaxellD/CommunityExperience.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaxellD/CommunityExperience/issues"
+  },
+  "homepage": "https://github.com/AaxellD/CommunityExperience#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.4"
+  }
+}
