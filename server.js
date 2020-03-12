@@ -26,6 +26,10 @@ const dbupdateobject = {
     useFindAndModify: false
 };
 
+app.get('/',(req,res)=>{
+    
+})
+
 // Listen Servers --
 app.listen(process.env.PORT,(req,res)=>{
     console.log(`Goliath Online - listening on port ${process.env.PORT}`)
