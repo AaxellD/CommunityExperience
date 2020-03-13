@@ -5,6 +5,12 @@ const bcrypt = require('bcryptjs');
 
 const Users = require('../models/users');
 
+// Routes
+//home
+router.get('/',(req,res)=>{
+    res.render('session/index.ejs')
+})
+
 // Login Page
 router.get('/new',(req,res)=>{
     res.render('session/new.ejs')
