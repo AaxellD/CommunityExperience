@@ -18,7 +18,7 @@ app.use(session({
     saveUninitialized:false
 }));
 
-// Controllers
+// Controllersq
 const db = mongoose.connection;
 const dbupdateobject = {
     useNewUrlParser: true,
@@ -27,7 +27,7 @@ const dbupdateobject = {
 };
 
 app.get('/',(req,res)=>{
-    
+    res.render('home.ejs')
 })
 
 // Listen Servers --
