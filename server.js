@@ -20,7 +20,7 @@ app.use(session({
 
 // CONTROLLERS
 const userController = require('./controllers/users')
-app.use()
+app.use('/users', userController)
 
 // ROUTES
 app.get('/',(req,res)=>{
