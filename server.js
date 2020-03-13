@@ -18,14 +18,11 @@ app.use(session({
     saveUninitialized:false
 }));
 
-// Controllersq
-const db = mongoose.connection;
-const dbupdateobject = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-};
+// CONTROLLERS
+const userController = require('./controllers/users')
+app.use()
 
+// ROUTES
 app.get('/',(req,res)=>{
     res.render('home.ejs')
 })
@@ -35,6 +32,13 @@ app.listen(process.env.PORT,(req,res)=>{
     console.log(`Goliath Online - listening on port ${process.env.PORT}`)
 })
 
+
+const db = mongoose.connection;
+const dbupdateobject = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+};
 // Connect to Mongo
 mongoose.connect(process.env.DATABASE_URL, dbupdateobject);
 // Connection Error/Success
