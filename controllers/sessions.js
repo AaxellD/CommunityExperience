@@ -29,4 +29,7 @@ router.post('/',(req,res)=>{
     })
 })
 
+router.post('/add',(req,res)=>{
+    Users.find()
+})
 module.exports = router;
