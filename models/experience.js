@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 // Model
-const ExpSchema = new Schema ({
+const ExpSchema = mongoose.Schema ({
     title:String,
     location:[String],
     people:[String],

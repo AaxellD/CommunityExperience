@@ -4,11 +4,19 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 
 const Users = require('../models/users');
+const Exp = require('../models/experience')
 
 // Routes
 //home
 router.get('/',(req,res)=>{
-    res.render('session/index.ejs')
+    Exp.find({},(err,data)=>{
+        res.render(
+            'session/index.ejs',
+            {
+                experience:Exp
+            }
+        )
+    })
 })
 
 // Login Page
@@ -29,7 +37,13 @@ router.post('/',(req,res)=>{
     })
 })
 
+router.get('/add',(req,res)=>{
+    res.render('session/add.ejs')
+})
+
 router.post('/add',(req,res)=>{
-    Users.find()
+    Exp.create(req.body,(err, data)=>{
+        res.redirect('/')
+    })
 })
 module.exports = router;

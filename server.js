@@ -35,7 +35,6 @@ app.listen(process.env.PORT,(req,res)=>{
     console.log(`Goliath Online - listening on port ${process.env.PORT}`)
 })
 
-
 const db = mongoose.connection;
 const dbupdateobject = {
     useNewUrlParser: true,
