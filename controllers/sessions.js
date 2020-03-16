@@ -19,6 +19,12 @@ router.get('/',(req,res)=>{
     })
 })
 
+// Show Router
+router.get('/:id',(req,res)=>{
+  Exp.find({req.params.id},(req,res)=>{
+    res.render('')
+  })
+})
 
 // Login Page
 router.get('/new',(req,res)=>{
@@ -50,7 +56,7 @@ router.post('/add',(req,res)=>{
     req.body.people = req.body.people.split(',')
     req.body.important = req.body.important.split(',')
 
-    Exp.create(req.body,(err, data)=>{ 
+    Exp.create(req.body,(err, data)=>{
         res.redirect('/session');
     })
 })
