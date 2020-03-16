@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="flex-col">
-      <div class="flex-col card">
 
-        <div class="flex-row">
-          <h1> <%= exp.title %> </h1>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>Show Page</title>
+  <%- include('../partials/header.ejs')%>
+</head>
 
-        <div class="flex-row">
-          <div class="half">
-            <h3>Locations:</h3>
-          </div>
-          <div class="half">
-            <ul>
-              <% if(exp.location >1){%>
-                <% for (let x in exp.location) { %>
-                  <li> <%=exp.location[x]%> </li>
-                <% } %>
-              <%}%>
-            </ul>
-          </div>
-        </div>
-
-        <div class="flex-row">
-          <div class="half">
-            <h3>Friends: </h3>
-          </div>
-          <div class="half">
-            <ul>
-              <% if(exp.people >1){%>
-                <% for (let x in exp.people) { %>
-                  <li> <%=exp.people[x]%> </li>
-                <% } %>
-              <%}%>
-            </ul>
-          </div>
-        </div>
-
-
+<body>
+  <%- include('../partials/nav.ejs') %>
+  <!-- page container -->
+  <div class="flex-col">
+    <!-- title -->
+    <h1>Story Page</h1>
+    
+    <!-- CARD BEGINS -->
+    <div class="flex-col card">
+      <!-- Card Ttile -->
+      <div class="flex-row">
+        <h1> <%= exp.title %> </h1>
       </div>
+      <!-- CARD LOCATIONS -->
+      <div class="flex-row">
+        <div class="half">
+          <h3>Locations:</h3>
+        </div>
+        <div class="half">
+          <ul>
+            <% for (let x in exp.location) { %>
+            <li> <%=exp.location[x]%> </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+      <!-- CARD PEOPLE -->
+      <div class="flex-row">
+        <div class="half">
+          <h3>Friends: </h3>
+        </div>
+
+        <div class="half">
+          <ul>
+            <% for (let x in exp.people) { %>
+            <li> <%=exp.people[x]%> </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+      <!-- CARD ACTIVITIES -->
+      <div class="flex-row">
+        <h3>Activities</h3>
+        <ul>
+          <% for (let x in exp.important) {%>
+          <li><%=exp.important[x]%></li>
+          <%} %>
+        </ul>
+      </div>
+
+
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

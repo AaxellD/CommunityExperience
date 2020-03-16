@@ -19,12 +19,7 @@ router.get('/',(req,res)=>{
     })
 })
 
-// Show Router
-router.get('/:id',(req,res)=>{
-  Exp.find({req.params.id},(req,res)=>{
-    res.render('')
-  })
-})
+
 
 // Login Page
 router.get('/new',(req,res)=>{
@@ -76,5 +71,17 @@ router.get('/showDb',(req,res)=>{
     })
 })
 
+// Show Router
+router.get('/:id',(req,res)=>{
+  Exp.findOne({_id:req.params.id},(err,data)=>{
+    res.render(
+        'session/show.ejs',
+        {
+            exp:data
+        }
+    )
+    // res.send(data)
+  })
+})
 // Export to Server
 module.exports = router;
