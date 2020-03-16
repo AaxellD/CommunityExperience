@@ -11,7 +11,7 @@
     
     <div>
         
-        <form action="/session/add" method="POST">
+        <form action="/session/add" method="POST" id="addForm">
             <!-- name -->
             <div class="flex-row">
                 <div class="half">
@@ -31,12 +31,12 @@
                 </div>
             </div>
             <!-- People -->
-            <div class="row">
+            <div class="flex-row">
                 <div class="half">
                     <p>Friends:</p>
                 </div>
                 <div class="half">
-                    <input type="text" name="friends">
+                    <input type="text" name="people">
                 </div>
             </div>
             <!-- Activites -->
@@ -45,7 +45,16 @@
                     Activites:
                 </div>
                 <div class="half">
-                    <input type="text" name="activities">
+                    <input type="text" name="important">
+                </div>
+            </div>
+            <!-- story-->
+            <div class="flex-row">
+                <div class="half">
+                    Tell a Story:
+                </div>
+                <div class="half">
+                <textarea name="story" form="addForm"></textarea>
                 </div>
             </div>
              <!--End  -->

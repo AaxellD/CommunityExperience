@@ -19,10 +19,12 @@ router.get('/',(req,res)=>{
     })
 })
 
+
 // Login Page
 router.get('/new',(req,res)=>{
     res.render('session/new.ejs')
 });
+
 // login redirect to session home page
 router.post('/',(req,res)=>{
     Users.findOne({username:req.body.username},(err,data)=>{
@@ -49,5 +51,20 @@ router.post('/add',(req,res)=>{
     })
 })
 
+// Delete All
+router.get('/deleteAll',(req,res)=>{
+    Exp.remove({},(err,data)=>{
+        console.log('collection deleted');
+        res.redirect('/session');
+    })
+})
 
+// search
+router.get('/showDb',(req,res)=>{
+    Exp.find({},(err, data)=>{
+        res.send(data)
+    })
+})
+
+// Export to Server
 module.exports = router;

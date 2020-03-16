@@ -30,6 +30,7 @@ app.get('/',(req,res)=>{
     res.render('home.ejs')
 })
 
+
 // Listen Servers --
 app.listen(process.env.PORT,(req,res)=>{
     console.log(`Goliath Online - listening on port ${process.env.PORT}`)

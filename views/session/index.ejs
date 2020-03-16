@@ -13,26 +13,42 @@
     <a href="/session/add">Post New Entry</a>
     <a href="/session/discover">Discover New Ideas</a>
     <hr>
+    <!-- LOAD DISCOVERY CARD -->
+    <div class="flex-row">
+    
     <% for (let x in exp) { %>
-    <% console.log(exp[x].title) %>
-
+        <% console.log(x) %>
+    <!-- title -->
     <h1><%=exp[x].title%></h1>
-
-    <h2>Locations:</h2>
-
+    <!-- Locations -->
+    <h3>Locations:</h3>
     <ul>
         <% if(exp[x].location.length >1){ %>
-
             <% for (let y in exp[x].location) { %>
-
                 <li><%= exp[x].location[y] %></li>
             <% } %>
         <% } else { %>
-
         <li><%=exp[x].location%></li>
         <% } %>
     </ul>
+
+    <!-- People -->
+    <h3>People:</h3>
+
+    <ul>
+        <% if(exp[x].people.length >1){ %>
+            <%console.log('it made it this far')%>
+            <% for (let y in exp[x].people) { %>
+                <li><%= exp[x].people[y] %></li>
+            <% } %>
+        <% } else { %>
+        <li><%=exp[x].people%></li>
+        <% } %>
+    </ul>
+    <!-- Important -->
     <% } %>
+
+    </div>
 </body>
 
 </html>
