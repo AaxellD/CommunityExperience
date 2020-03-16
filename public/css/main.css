@@ -34,9 +34,10 @@ li {
 }
 
 .card {
-    background-color: lightcoral;
+    background-color: rgb(128, 214, 240);
     margin:10px;
     padding:20px;
 
     border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px white;
 }
