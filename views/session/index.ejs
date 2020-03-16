@@ -26,46 +26,49 @@
     <div class="flex-row">
 
         <% for (let x in exp) { %>
-        <div class="card flex-col">
-            <!-- title -->
-            <div class="flex-row">
-                <h1><%=exp[x].title%></h1>
-            </div>
-            <!-- Locations -->
-            <div class="flex-row">
-                <h3>Locations:</h3>
-                <ul>
-                    <% if(exp[x].location.length >1){ %>
-                    <% for (let y in exp[x].location) { %>
-                    <li><%= exp[x].location[y] %></li>
-                    <% } %>
-                    <% } else { %>
-                    <li><%=exp[x].location%></li>
-                    <% } %>
-                </ul>
-            </div>
-
-            <!-- People -->
-            <div class="flex-row">
-                <div class="half">
-                    <h3>People:</h3>
+        <a href="/session/<%=exp[x].id%>">
+            <div class="card flex-col">
+                <!-- title -->
+                <div class="flex-row">
+                    <h1><%=exp[x].title%></h1>
                 </div>
-                <div class="half">
+                <!-- Locations -->
+                <div class="flex-row">
+                    <h3>Locations:</h3>
                     <ul>
-                        <% if(exp[x].people.length >1){ %>
-                        <% for (let y in exp[x].people) { %>
-                        <li><%= exp[x].people[y] %></li>
+                        <% if(exp[x].location.length >1){ %>
+                        <% for (let y in exp[x].location) { %>
+                        <li><%= exp[x].location[y] %></li>
                         <% } %>
                         <% } else { %>
-                        <li><%=exp[x].people%></li>
+                        <li><%=exp[x].location%></li>
                         <% } %>
                     </ul>
                 </div>
+
+                <!-- People -->
+                <div class="flex-row">
+                    <div class="half">
+                        <h3>People:</h3>
+                    </div>
+                    <div class="half">
+                        <ul>
+                            <% if(exp[x].people.length >1){ %>
+                            <% for (let y in exp[x].people) { %>
+                            <li><%= exp[x].people[y] %></li>
+                            <% } %>
+                            <% } else { %>
+                            <li><%=exp[x].people%></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Important -->
             </div>
-            <!-- Important -->
-        </div>
-            <% } %>
+        </a>
+        <% } %>
     </div>
+
 </body>
 
 </html>
