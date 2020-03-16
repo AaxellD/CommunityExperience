@@ -46,8 +46,12 @@ router.get('/add',(req,res)=>{
 
 //  Post New Entry and redirect to home page
 router.post('/add',(req,res)=>{
-    Exp.create(req.body,(err, data)=>{
-        res.redirect('/session')
+    req.body.location = req.body.location.split(',')
+    req.body.people = req.body.people.split(',')
+    req.body.important = req.body.important.split(',')
+
+    Exp.create(req.body,(err, data)=>{ 
+        res.redirect('/session');
     })
 })
 
