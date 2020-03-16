@@ -4,50 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Community Experience</title>
+
+    <%- include('../partials/header.ejs')%>
 </head>
 
 <body>
-    <h1>Welcome to the Experience</h1>
-    <p>Now that you are signed in, would you like to post an experience or discover new ones?</p>
+    <div class="flex-row">
+        <h1>Welcome to the Experience</h1>
+    </div>
+    
+    <div class="decription flex-row"> 
+        <p>Now that you are signed in, feel free to explore the stories and experiences of people in your community!</p>
+    </div>
+
     <a href="/session/add">Post New Entry</a>
     <a href="/session/discover">Discover New Ideas</a>
     <hr>
     <!-- LOAD DISCOVERY CARD -->
     <div class="flex-row">
-    
-    <% for (let x in exp) { %>
-        <% console.log(x) %>
-    <!-- title -->
-    <h1><%=exp[x].title%></h1>
-    <!-- Locations -->
-    <h3>Locations:</h3>
-    <ul>
-        <% if(exp[x].location.length >1){ %>
-            <% for (let y in exp[x].location) { %>
-                <li><%= exp[x].location[y] %></li>
+
+        <% for (let x in exp) { %>
+        <div class="card flex-col">
+            <!-- title -->
+            <div class="flex-row">
+                <h1><%=exp[x].title%></h1>
+            </div>
+            <!-- Locations -->
+            <div class="flex-row">
+                <h3>Locations:</h3>
+                <ul>
+                    <% if(exp[x].location.length >1){ %>
+                    <% for (let y in exp[x].location) { %>
+                    <li><%= exp[x].location[y] %></li>
+                    <% } %>
+                    <% } else { %>
+                    <li><%=exp[x].location%></li>
+                    <% } %>
+                </ul>
+            </div>
+
+            <!-- People -->
+            <div class="flex-row">
+                <div class="half">
+                    <h3>People:</h3>
+                </div>
+                <div class="half">
+                    <ul>
+                        <% if(exp[x].people.length >1){ %>
+                        <% for (let y in exp[x].people) { %>
+                        <li><%= exp[x].people[y] %></li>
+                        <% } %>
+                        <% } else { %>
+                        <li><%=exp[x].people%></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+            <!-- Important -->
+        </div>
             <% } %>
-        <% } else { %>
-        <li><%=exp[x].location%></li>
-        <% } %>
-    </ul>
-
-    <!-- People -->
-    <h3>People:</h3>
-
-    <ul>
-        <% if(exp[x].people.length >1){ %>
-            <%console.log('it made it this far')%>
-            <% for (let y in exp[x].people) { %>
-                <li><%= exp[x].people[y] %></li>
-            <% } %>
-        <% } else { %>
-        <li><%=exp[x].people%></li>
-        <% } %>
-    </ul>
-    <!-- Important -->
-    <% } %>
-
     </div>
 </body>
 

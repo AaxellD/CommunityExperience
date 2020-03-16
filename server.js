@@ -11,6 +11,7 @@ const methodOverride = require('method-override');
 const session = require('express-session')
 
 // Middle Ware Applied
+app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
 app.use(session({
     secret:'wisdom',

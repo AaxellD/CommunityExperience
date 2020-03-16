@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Experience</title>
+    <%- include('../partials/header.ejs')%>
 </head>
 <body>
-    <h1>Post Your Experience</h1>
+    <div class="flex-row">
+        <h1>Post Your Experience</h1>
+    </div>
 
     
-    <div>
+    <div class="flex-col container">
         
         <form action="/session/add" method="POST" id="addForm">
             <!-- name -->
