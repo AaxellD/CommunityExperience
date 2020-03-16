@@ -9,5 +9,5 @@ const ExpSchema = mongoose.Schema ({
     important:[String]
 })
 
-const Experiences = mongoose.model('Experiences',ExpSchema);
-module.exports= Experiences;
+const Experience = mongoose.model('Experience',ExpSchema);
+module.exports= Experience;

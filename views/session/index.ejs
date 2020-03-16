@@ -12,5 +12,27 @@
     <p>Now that you are signed in, would you like to post an experience or discover new ones?</p>
     <a href="/session/add">Post New Entry</a>
     <a href="/session/discover">Discover New Ideas</a>
+    <hr>
+    <% for (let x in exp) { %>
+    <% console.log(exp[x].title) %>
+
+    <h1><%=exp[x].title%></h1>
+
+    <h2>Locations:</h2>
+
+    <ul>
+        <% if(exp[x].location.length >1){ %>
+
+            <% for (let y in exp[x].location) { %>
+
+                <li><%= exp[x].location[y] %></li>
+            <% } %>
+        <% } else { %>
+
+        <li><%=exp[x].location%></li>
+        <% } %>
+    </ul>
+    <% } %>
 </body>
+
 </html>

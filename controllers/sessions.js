@@ -7,13 +7,13 @@ const Users = require('../models/users');
 const Exp = require('../models/experience')
 
 // Routes
-//home
+//  Home
 router.get('/',(req,res)=>{
-    Exp.find({},(err,data)=>{
+    Exp.find({},(err,allExp)=>{
         res.render(
             'session/index.ejs',
             {
-                experience:Exp
+                exp:allExp
             }
         )
     })
@@ -23,7 +23,7 @@ router.get('/',(req,res)=>{
 router.get('/new',(req,res)=>{
     res.render('session/new.ejs')
 });
-
+// login redirect to session home page
 router.post('/',(req,res)=>{
     Users.findOne({username:req.body.username},(err,data)=>{
         if (data == null) {
@@ -37,13 +37,17 @@ router.post('/',(req,res)=>{
     })
 })
 
+//  Go to New Entry
 router.get('/add',(req,res)=>{
     res.render('session/add.ejs')
 })
 
+//  Post New Entry and redirect to home page
 router.post('/add',(req,res)=>{
     Exp.create(req.body,(err, data)=>{
-        res.redirect('/')
+        res.redirect('/session')
     })
 })
+
+
 module.exports = router;
