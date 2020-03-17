@@ -118,11 +118,19 @@ router.get('/showDb', (req, res) => {
 })
 
 // Edit Story
-router.get('/:id/edit', (req, res) => {
-    Exp.findOneAndUpdate({ _id: req.params.id }, req.body, (err, data) => {
-        res.render('session/edit.ejs', {
-            exp: data
-        })
+router.get('/:id/edit',(req,res)=>{
+    Exp.findById(req.params.id,(err,data)=>{
+       res.render(
+           'session/edit.ejs', {
+               exp:data
+           }
+       )
+    })
+})
+        // POST 
+router.post('/:id/edit', (req, res) => {
+    Exp.findByIdAndUpdate(req.params.id, req.body,{new:false}, (err, data) => {
+       res.redirect('/session')
     })
 })
 

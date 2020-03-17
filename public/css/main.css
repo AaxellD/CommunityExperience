@@ -55,6 +55,7 @@ li {
 .card {
     background-color: #3e8aaf;
     max-width: 22%;
+    min-width:300px;
     color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 1px white;
@@ -120,3 +121,5 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.55);
     color:white;
 }
+
+/* Other Pages */
