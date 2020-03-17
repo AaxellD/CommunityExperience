@@ -123,4 +123,9 @@ a:hover {
     color:white;
 }
 
-/* Other Pages */
+/* COLORS */
+.dark {
+    color:white;
+    background-color: rgba(15, 15, 15, 0.8);
+    border-radius: 5px;
+}

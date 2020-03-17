@@ -7,13 +7,14 @@
     <%- include('../partials/header.ejs')%>
 </head>
 <body class="container">
+<div class="dark">
     <div class="flex-col header">
         <h1>Post Your Experience</h1>
         <%- include('../partials/nav.ejs')%>
     </div>
     
     
-    <div class="flex-col container">
+    <div class="flex-col">
         
         <form action="/session/add" method="POST" id="addForm">
             <!-- name -->
@@ -65,6 +66,6 @@
             <input type="submit" value="Share Experience">
         </form>
     </div>
-
+</div>
 </body>
 </html>
