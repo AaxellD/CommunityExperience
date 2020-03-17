@@ -50,6 +50,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color:rgb(15,15,15);
+    background-color:white;
+}
+
 nav a {
     color:white;
 
