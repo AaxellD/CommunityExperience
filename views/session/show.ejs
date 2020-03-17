@@ -9,46 +9,50 @@
 
 <body>
   <%- include('../partials/nav.ejs') %>
+  
   <!-- page container -->
-  <div class="flex-col">
+  <div class="show-box">
     <!-- title -->
     <h1>Story Page</h1>
-    
+
     <!-- CARD BEGINS -->
-    <div class="flex-col dark">
+    <div class="light bd-dark">
 
       <!-- Card Ttile -->
       <div class="flex-row">
         <h1> <%= exp.title %> </h1>
       </div>
 
+      <!-- IMG -->
+      <img src="<%=exp.img%>" alt="">
+
+ <!-- CARD STORY -->
+      <div class="flex-col">
+        <h3>The Story:</h3>
+        <p><%=exp.story%></p>
+      </div>
+      
       <!-- CARD LOCATIONS -->
       <div class="flex-row">
-        <div class="half">
-          <h3>Locations:</h3>
-        </div>
-        <div class="half">
-          <ul>
-            <% for (let x in exp.location) { %>
-            <li> <%=exp.location[x]%> </li>
-            <% } %>
-          </ul>
-        </div>
+
+        <h3>Locations:</h3>
+        <ul>
+          <% for (let x in exp.location) { %>
+          <li> <%=exp.location[x]%> </li>
+          <% } %>
+        </ul>
       </div>
 
       <!-- CARD PEOPLE -->
       <div class="flex-row">
-        <div class="half">
-          <h3>Friends: </h3>
-        </div>
+        <h3>Friends: </h3>
 
-        <div class="half">
-          <ul>
-            <% for (let x in exp.people) { %>
-            <li> <%=exp.people[x]%> </li>
-            <% } %>
-          </ul>
-        </div>
+        <ul>
+          <% for (let x in exp.people) { %>
+          <li> <%=exp.people[x]%> </li>
+          <% } %>
+        </ul>
+
       </div>
 
       <!-- CARD ACTIVITIES -->
@@ -61,11 +65,7 @@
         </ul>
       </div>
 
-      <!-- CARD STORY -->
-      <div class="flex-col">
-        <h3>The Story:</h3>
-        <p><%=exp.story%></p>
-      </div>
+     
 
     </div>
     <a href="/session/<%=exp._id%>/edit" class="btn">Edit Story</a>

@@ -1,6 +1,7 @@
 body {
     background-image: url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80');
     background-size: cover;
+    background-attachment: fixed;
     font-family: sans-serif;
 
     width:70%;
@@ -67,6 +68,10 @@ li {
     padding: 20px;
 }
 
+.bd-dark {
+    border:4px solid black;
+}
+
 .header {
     display:flex;
     flex-direction: row;
@@ -117,6 +122,18 @@ li {
 .card-link {
     background-color: transparent;
     color:black;
+}
+/* SHow box */
+.show-box {
+    display:flex;
+    flex-direction:column;
+
+    align-items: center;
+}
+
+.show-box img {
+    height:550px;
+    width:100%;
 }
 
 /* NAV LINKS */
