@@ -11,13 +11,14 @@
 </head>
 
 <body class="city">
+    
     <div class="flex-row">
         <h1>Welcome to the Experience</h1>
     </div>
 
     <%- include('../partials/nav.ejs') %>
 
-    <div class="dark">
+    <div class="light">
         <div class="decription flex-row">
             <p>Now that you are signed in, feel free to explore the stories and experiences of people in your community!
             </p>
@@ -30,9 +31,14 @@
             <div class="card flex-col">
                 <a href="/session/<%=exp[x].id%>" class="card-link">
                     <!-- title -->
-                    <div class="flex-row">
+                    <div>
                         <h1><%=exp[x].title%></h1>
                     </div>
+
+                    <% if (exp[x].img) {%>
+                        <img src="<%=exp[x].img%>" alt="">
+                    <% }%>
+
                     <!-- Locations -->
                     <div class="flex-row">
                         <h3>Locations:</h3>
@@ -60,12 +66,13 @@
                             </ul>
                         </div>
                     </div>
+
                 </a>
-                <!-- Important -->
             </div>
             <% } %>
         </div>
     </div>
+    <%-include('../partials/footer.ejs')%>
 </body>
 
 </html>

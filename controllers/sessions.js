@@ -12,6 +12,7 @@ router.get('/seed', (req, res) => {
         [
             {
                 title: 'Bowling and Dancing',
+                img:'/imgs/bowling.jpg',
                 location: ['Bowl Stars'],
                 people: ['JC', 'Tim', 'Paul', 'Kat'],
                 important: ['Bowling'],
@@ -19,6 +20,7 @@ router.get('/seed', (req, res) => {
             },
             {
                 title: 'Tennis Courts in Rome were Great!',
+                img:'/imgs/tennis.jpg',
                 location: ['City Park Courts'],
                 people: ['Randy', 'Al', 'Jack', 'Kat'],
                 important: ['Tennis',"walking","dogs"],
@@ -26,6 +28,7 @@ router.get('/seed', (req, res) => {
             },
             {
                 title: 'Running by the River',
+                img:'/imgs/running.jpg',
                 location: ['Levy'],
                 people: ['JC', 'Tim'],
                 important: ['Running'],
@@ -33,6 +36,7 @@ router.get('/seed', (req, res) => {
             },
             {
                 title: 'Dance Party!!!',
+                img:'/imgs/festival.jpg',
                 location: ['MoonShinerz'],
                 people: ['Justin', 'Mika', 'Mercedes', 'Kate'],
                 important: ['dancing','Drinking','Singing'],
@@ -40,11 +44,36 @@ router.get('/seed', (req, res) => {
             },
             {
                 title: 'Wisdom in the Towers',
+                img:'/imgs/clocktower.jpg',
                 location: ['Clock Tower'],
                 people: ['none'],
                 important: ['Philosophy'],
                 story: 'This was the place where you can see over the entire city and grasp just a glimpse of the true meaning of life.'
-            }
+            },
+            {
+                title: 'Fun at the Lake',
+                img:'/imgs/swimming.jpg',
+                location: ['Lakeshore Lake'],
+                people: ['Axel', 'Kato', 'Krystal', 'Caitlyn'],
+                important: ['swimming', 'Drinking','Music'],
+                story: 'There is a really great lake just down the road from the burger shack that has a great diving spot and plenty of space to grill out! '
+            },
+            {
+                title: 'Exploring',
+                img:'/imgs/exploring.jpg',
+                location: ['Summerville'],
+                people: ['Shelly'],
+                important: ['swimming', 'exploring','hiking'],
+                story: 'Found an amazing paradise hide out that was so beautiful to explore! '
+            },
+            {
+                title: 'Walk in the Park',
+                img:'/imgs/park.jpg',
+                location: ['Ceremonial Park'],
+                people: ['none'],
+                important: ['swimming', 'Drinking','Music'],
+                story: 'Really enjoyed a nice walk in the park this evening! Beautiful leaves! '
+            },
         ], (err, data) => {
             res.redirect('/session')
         }

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Experience</title>
     <%- include('../partials/header.ejs')%>
 </head>
-<body class="container">
+
+<body>
     <div class="header">
         <div> </div>
         <h1>Post Your Experience</h1>
@@ -14,61 +16,71 @@
             <%- include('../partials/nav.ejs')%>
         </div>
     </div>
-    
-    <div class="dark">
-    
-    <div class="flex-col">
-        
-        <form action="/session/add" method="POST" id="addForm">
-            <!-- name -->
-            <div class="flex-row">
-                <div class="half">
-                    <p>Title:</p>
+
+    <div class="container-lg dark">
+
+        <div class="flex-col light">
+
+            <form action="/session/add" method="POST" id="addForm">
+                <!-- name -->
+                <div class="flex-row">
+                    <div class="half">
+                        <h3>Title</h3>
+                    </div>
+                    <div class="half">
+                        <input type="text" name="title">
+                    </div>
                 </div>
-                <div class="half">
-                    <input type="text" name="title">
+                <!-- Image -->
+                <div class="flex-row">
+                    <div class="half">
+                        <h3>Add Img URL:</h3>
+                    </div>
+                    <div class="half">
+                        <input type="text" name="img">
+                    </div>
                 </div>
-            </div>
-            <!-- place -->
-            <div class="flex-row">
-                <div class="half">
-                    <p>Places:</p>
+                <!-- place -->
+                <div class="flex-row">
+                    <div class="half">
+                        <h3>Locations:</h3>
+                    </div>
+                    <div class="half">
+                        <input type="text" name="location">
+                    </div>
                 </div>
-                <div class="half"> 
-                    <input type="text" name="location">
+                <!-- People -->
+                <div class="flex-row">
+                    <div class="half">
+                        <h3>Friends:</h3>
+                    </div>
+                    <div class="half">
+                        <input type="text" name="people">
+                    </div>
                 </div>
-            </div>
-            <!-- People -->
-            <div class="flex-row">
-                <div class="half">
-                    <p>Friends:</p>
+                <!-- Activites -->
+                <div class="flex-row">
+                    <div class="half">
+                        <h3>Activities:</h3>
+                    </div>
+                    <div class="half">
+                        <input type="text" name="important">
+                    </div>
                 </div>
-                <div class="half">
-                    <input type="text" name="people">
+                <!-- story-->
+                <div class="flex-row">
+                    <div class="half">
+                        <h3>Tell a Story:</h3>
+                    </div>
+                    <div class="half">
+                        <textarea name="story" form="addForm"></textarea>
+                    </div>
                 </div>
-            </div>
-            <!-- Activites -->
-            <div class="flex-row">
-                <div class="half">
-                    Activites:
-                </div>
-                <div class="half">
-                    <input type="text" name="important">
-                </div>
-            </div>
-            <!-- story-->
-            <div class="flex-row">
-                <div class="half">
-                    Tell a Story:
-                </div>
-                <div class="half">
-                <textarea name="story" form="addForm"></textarea>
-                </div>
-            </div>
-             <!--End  -->
-            <input type="submit" value="Share Experience">
-        </form>
+                <!--End  -->
+                <input type="submit" value="Share Experience">
+            </form>
+        </div>
     </div>
-</div>
 </body>
+
 </html>

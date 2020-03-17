@@ -7,35 +7,22 @@
     <%- include('../partials/header.ejs')%>
 </head>
 <body>
-    <div class="flex-col header">
+    <div class="flex-col header dark">
         <h1>Login Page</h1>
         <a href="/" class="btn">Return Home</a>
     </div>
 
-    <div class="flex-col container">
+    <div class="flex-col container dark" style="margin-top:10vw;">
         <form action="/session" method="POST">
             <!-- name -->
-            <div class="flex-row">
-                <div class="half">
-                    <p>Username:</p>
-                </div>
-                <div class="half">
-                    <input type="text" name="username">
-                </div>
-            </div>
+            <h5>Username:</h5>
+            <input type="text" name="username">
             <!-- place -->
-            <div class="flex-row">
-                <div class="half">
-                    <p>Password:</p>
-                </div>
-                <div class="half"> 
-                    <input type="text" name="password">
-                </div>
-            </div>
-           
+            <h5>Password:</h5>
+            <input type="text" name="password"> 
              <!--End  -->
-             <div class="flex-row">
-                 <input type="submit" value="Login">
+            <div style="padding:20px;">
+                <input type="submit" value="Login">
              </div>
         </form>
     </div>
