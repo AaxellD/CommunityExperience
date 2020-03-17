@@ -3,14 +3,19 @@ body {
     color:white;
 }
 
+/* LIST */
+
 li {
     list-style: none;
     text-decoration: none;
 }
 
+/* GENERAL BODY CSS */
+
 .flex-row {
     display:flex;
     flex-direction: row;
+    flex-wrap:wrap;
 
     padding:5px;
 
@@ -24,6 +29,7 @@ li {
     flex-direction: column;
 
     padding:5px;
+    margin:10px;
 
     justify-content: center;
     align-items: center;
@@ -32,7 +38,18 @@ li {
 
 .half {
     width:48%;
+    margin:auto;
 }
+
+.container {
+    border:4px solid white;
+    margin:auto;
+
+    width:50%;
+    padding:10px;
+}
+
+/* CARDS ON INDEX AND SHOW PAGE */
 
 .card {
     background-color: rgba(94, 172, 196, 0.856);
@@ -46,29 +63,32 @@ li {
     box-shadow: 2px 2px 5px 1px white;
 }
 
+/* NAV LINKS */
+
 a {
     text-decoration: none;
 }
 
-a:hover {
-    color:rgb(15,15,15);
-    background-color:white;
+    a:hover {
+        color:rgb(15,15,15);
+        background-color:white;
 
-    border-radius: 10px;
-}
+        border-radius: 10px;
+    }
 
-nav a {
-    color:white;
+    nav a {
+        color:white;
 
-    border:2px solid white;
-    border-radius: 5px;
-    
-    margin:10px;
-    padding:10px;
+        border:2px solid white;
+        border-radius: 5px;
+        
+        margin:10px;
+        padding:10px;
 
-    text-decoration: none;
-}
+        text-decoration: none;
+    }
 
+/* LOGIN PAGE */
 .login {
     background-color: rgb(78, 139, 175);
     border-radius: 10px;

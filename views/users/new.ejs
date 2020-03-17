@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Sign Up</title>
+    <%- include('../partials/header.ejs')%>
 </head>
 
 <body>
     <!-- Title -->
-    <div class="title">
-        <h1>New Users</h1>
+    <div class="flex-row">
+        <h1>Sign Up Account</h1>
+        <p>Sign up below with your username and password to create a new account! (Don't worry, this is totally private and I won't be sharing it with my class.... too much)</p>
+        <a href="/">Return Home</a>
     </div>
 
-    <div class="flex-col">
+    
+    <div class="flex-col container">
 
         <form action="/users" method="POST">
             <!-- name -->
