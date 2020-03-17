@@ -7,28 +7,29 @@
 
     <%- include('./partials/header.ejs') %>
 </head>
-<body>
-    <div class="flex-row">
-        <h1>Welcome to the Experience</h1>
-    </div>
-
-    <div class="flex-row login">
-        <div class="flex-col login-info">
-            <h3>Explor and Discover</h3>
-            <p>Find out what is going on in your town by exploring the stories and experiences of the community around you!</p>
+<body class="home">
+    
+        <div class="home-box">
+            <div class="flex-row">
+                <h1>Welcome to the Experience</h1>
+            </div>
+            
+            <div class="login">
+                <div class="flex-col login-info">
+                    <h3>Explor and Discover</h3>
+                    <p>Find out what is going on in your town by exploring the stories and experiences of the community around you!</p>
+                </div>
+                
+                <nav class="flex-row">
+                    <div class="flex-row nav">
+                        <a href="/session/new" class="btn">Login</a>
+                    </div>
+                    <div class="flex-row nav">
+                        <a href="/users/new" class="btn">Sign Up</a>
+                    </div>
+                </nav>
+            </div>
         </div>
-
-        <nav class="flex-col">
-            <div class="flex-row">
-                <a href="/session/new">Login</a>
-            </div>
-            <div class="flex-row">
-                <a href="/users/new">Sign Up</a>
-            </div>
-        </nav>
-    </div>
-
-
 
 </body>
 </html>

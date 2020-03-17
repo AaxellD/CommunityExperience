@@ -14,18 +14,19 @@
     <div class="flex-row">
         <h1>Welcome to the Experience</h1>
     </div>
-
+    
+    <%- include('../partials/nav.ejs') %>
+    
     <div class="decription flex-row">
         <p>Now that you are signed in, feel free to explore the stories and experiences of people in your community!</p>
     </div>
-    <%- include('../partials/nav.ejs') %>
     <hr>
     <!-- LOAD DISCOVERY CARD -->
     <div class="flex-row">
 
         <% for (let x in exp) { %>
-        <a href="/session/<%=exp[x].id%>">
             <div class="card flex-col">
+                <a href="/session/<%=exp[x].id%>" class="card-link">
                 <!-- title -->
                 <div class="flex-row">
                     <h1><%=exp[x].title%></h1>
@@ -57,9 +58,9 @@
                         </ul>
                     </div>
                 </div>
+            </a>
                 <!-- Important -->
             </div>
-        </a>
         <% } %>
     </div>
 
