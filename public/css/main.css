@@ -20,24 +20,30 @@ li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
     padding: 5px 5px;
     margin: 5px 5px;
+
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 20px;
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
+
     padding: 5px 5px;
     margin: 5px 5px;
+    
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .half {
+    display:inline-block;
     width: 48%;
     margin: auto;
 }
@@ -50,40 +56,68 @@ li {
     padding: 10px;
 }
 
+.header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.nav {
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.55);
+
+    position: absolute;
+    top:0px;
+    right:0px;
+
+    padding:20px;
+
+    border-radius: 10px 0px 0px 10px;
+
+    justify-content: flex-end;
+}
+
 /* CARDS ON INDEX AND SHOW PAGE */
 
 .card {
-    background-color: #3e8aaf;
+    background-color: rgb(50,150,150,.95);
+    border:2px solid white;
+    
     max-width: 22%;
     min-width:300px;
     height:350px;
+
     color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 1px white;
 }
-
+.card:hover {
+    background-color: rgba(15, 15, 15, 0.8);
+}
 /* NAV LINKS */
 
 a {
-    background-color: rgb(15,15,15);
-    color: white;
     text-decoration: none;
-}
-
-a:hover {
-    color: rgb(15, 15, 15);
-    background-color: white;
-    box-shadow: 1px 1px 2px white;
-    border-radius: 10px;
+    color: white;
 }
 
 .btn {
     color: rgb(255, 255, 255);
+    background-color: rgba(15, 15, 15);
     border: 2px solid white;
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
     text-decoration: none;
+}
+
+.btn:hover {
+    color: rgb(15, 15, 15);
+    background-color: white;
+    box-shadow: 1px 1px 2px white;
+    border-radius: 10px;
 }
 
 .card-link {
@@ -126,6 +160,6 @@ a:hover {
 /* COLORS */
 .dark {
     color:white;
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(15, 15, 15, 0.9);
     border-radius: 5px;
 }
