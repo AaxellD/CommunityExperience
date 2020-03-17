@@ -53,6 +53,8 @@ a {
 a:hover {
     color:rgb(15,15,15);
     background-color:white;
+
+    border-radius: 10px;
 }
 
 nav a {
@@ -65,4 +67,18 @@ nav a {
     padding:10px;
 
     text-decoration: none;
+}
+
+.login {
+    background-color: rgb(78, 139, 175);
+    border-radius: 10px;
+    padding:30px 0px;
+    border:2px solid white;
+
+    margin:auto;
+}
+
+.login-info {
+    border-radius: 5px;
+    width:35%;
 }

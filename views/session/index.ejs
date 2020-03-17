@@ -47,16 +47,12 @@
                 <!-- People -->
                 <div class="flex-row">
                     <div class="half">
-                        <h3>People:</h3>
+                        <h3>Activites:</h3>
                     </div>
                     <div class="half">
                         <ul>
-                            <% if(exp[x].people.length >1){ %>
-                            <% for (let y in exp[x].people) { %>
-                            <li><%= exp[x].people[y] %></li>
-                            <% } %>
-                            <% } else { %>
-                            <li><%=exp[x].people%></li>
+                            <% for (let y in exp[x].important) { %>
+                            <li><%= exp[x].important[y] %></li>
                             <% } %>
                         </ul>
                     </div>
