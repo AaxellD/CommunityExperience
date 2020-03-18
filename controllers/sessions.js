@@ -163,6 +163,12 @@ router.post('/:id/edit', (req, res) => {
     })
 })
 
+router.get('/:id/delete',(req,res)=>{
+    Exp.findByIdAndRemove(req.params.id,(err,data)=>{
+        res.redirect('/session')
+    })
+})
+
 // Show Router
 router.get('/:id', (req, res) => {
     Exp.findOne({ _id: req.params.id }, (err, data) => {

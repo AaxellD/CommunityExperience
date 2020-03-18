@@ -10,61 +10,47 @@
     <%- include('../partials/header.ejs')%>
 </head>
 
-<body class="city">
-    
-    <div class="flex-row">
-        <h1>Welcome to the Experience</h1>
-    </div>
-
+<body>
     <%- include('../partials/nav.ejs') %>
 
-    <div class="light">
-        <div class="decription flex-row">
-            <p>Now that you are signed in, feel free to explore the stories and experiences of people in your community!
-            </p>
+    <div>
+        <div class="row center">
+            <h2>Explore Community Stories</h2>
         </div>
         <hr>
-        <!-- LOAD DISCOVERY CARD -->
-        <div class="flex-row">
+        <!-- LOAD DISCOVERY CARDS -->
+        <div class="container dark flex-row">
 
             <% for (let x in exp) { %>
-            <div class="card flex-col">
+            <div class="card flex-col light">
                 <a href="/session/<%=exp[x].id%>" class="card-link">
                     <!-- title -->
-                    <div>
-                        <h1><%=exp[x].title%></h1>
+                    <div class="flex-row">
+                        <h2><%=exp[x].title%></h2>
                     </div>
 
                     <% if (exp[x].img) {%>
-                        <img src="<%=exp[x].img%>" alt="">
+                    <img src="<%=exp[x].img%>" alt="">
                     <% }%>
 
                     <!-- Locations -->
-                    <div class="flex-row">
-                        <h3>Locations:</h3>
+                    <div class="row center">
                         <ul>
-                            <% if(exp[x].location.length >1){ %>
                             <% for (let y in exp[x].location) { %>
-                            <li><%=exp[x].location[y] %></li>
+                            <p><%=exp[x].location[y] %><p>
                             <% } %>
-                            <% } else { %>
-                            <li><%=exp[x].location%></li>
-                            <% } %>
+                            
                         </ul>
                     </div>
 
-                    <!-- People -->
-                    <div class="flex-row">
-                        <div>
-                            <h3>Activites:</h3>
-                        </div>
-                        <div>
-                            <ul>
-                                <% for (let y in exp[x].important) { %>
-                                <li><%= exp[x].important[y] %></li>
-                                <% } %>
-                            </ul>
-                        </div>
+                    <!-- Activities -->
+                    <div class="row center">
+                        <h3>Activites:</h3>
+                        <% for (let y in exp[x].important) { %>
+                        <p>&nbsp<%= exp[x].important[y] %> &nbsp</p>
+                        <% } %>
+                    
+
                     </div>
 
                 </a>

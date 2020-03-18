@@ -11,13 +11,11 @@
   <%- include('../partials/nav.ejs') %>
   
   <!-- page container -->
-  <div class="show-box">
+  <div class="show-wrapper">
     <!-- title -->
-    <h1>Story Page</h1>
-
+    
     <!-- CARD BEGINS -->
-    <div class="light bd-dark">
-
+    <div class="show-box light bd-dark">
       <!-- Card Ttile -->
       <div class="flex-row">
         <h1> <%= exp.title %> </h1>
@@ -31,7 +29,7 @@
         <h3>The Story:</h3>
         <p><%=exp.story%></p>
       </div>
-      
+
       <!-- CARD LOCATIONS -->
       <div class="flex-row">
 
@@ -46,7 +44,6 @@
       <!-- CARD PEOPLE -->
       <div class="flex-row">
         <h3>Friends: </h3>
-
         <ul>
           <% for (let x in exp.people) { %>
           <li> <%=exp.people[x]%> </li>
@@ -65,11 +62,12 @@
         </ul>
       </div>
 
-     
-
     </div>
+
     <a href="/session/<%=exp._id%>/edit" class="btn">Edit Story</a>
   </div>
+
+  <%-include('../partials/footer.ejs')%>
 </body>
 
 </html>

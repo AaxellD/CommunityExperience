@@ -9,38 +9,42 @@
 </head>
 
 <body>
-    <!-- Title -->
-    <div class="flex-col">
-        <h1>Sign Up Account</h1>
-        <p>Sign up below with your username and password to create a new account! (Don't worry, this is totally private and I won't be sharing it with my class.... too much)</p>
-        <a href="/" class="btn">Return Home</a>
-    </div>
+    <div class="sign-up dark">
+        <!-- Title -->
+        <div class="half half-decor">
+            <h1>Sign Up Account</h1>
+            <p>Sign up below with your username and password to create a new account! (Don't worry, this is totally
+                private and I won't be sharing it with my class.... too much)</p>
+                <br>
+            <a href="/" class="btn">Return Home</a>
+        </div>
 
-    
-    <div class="flex-col container">
 
-        <form action="/users" method="POST">
-            <!-- name -->
-            <div class="flex-row">
-                <div class="half">
-                    <p>Username:</p>
+        <div class="half dark">
+            <form action="/users" method="POST">
+                <!-- name -->
+                <div class="flex-row">
+                    <div class="half">
+                        <p>Username:</p>
+                    </div>
+                    <div class="half">
+                        <input type="text" name="username">
+                    </div>
                 </div>
-                <div class="half">
-                    <input type="text" name="username">
+                <!-- place -->
+                <div class="flex-row">
+                    <div class="half">
+                        <p>Password:</p>
+                    </div>
+                    <div class="half">
+                        <input type="text" name="password">
+                    </div>
+                    <input type="submit" value="Login">
                 </div>
-            </div>
-            <!-- place -->
-            <div class="flex-row">
-                <div class="half">
-                    <p>Password:</p>
-                </div>
-                <div class="half"> 
-                    <input type="text" name="password">
-                </div>
-            </div>
-             <!--End  -->
-            <input type="submit" value="Login">
-        </form>
+                <!--End  -->
+            </form>
+        </div>
+
 
     </div>
 </body>
