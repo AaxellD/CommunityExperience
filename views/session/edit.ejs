@@ -12,9 +12,6 @@
         <%-include('../partials/nav')%>
     </div>
 
-    <div class="">
-
-    </div>
     
     <div class="flex-col container dark">
         
@@ -26,6 +23,15 @@
                 </div>
                 <div class="half">
                     <input type="text" name="title" value="<%=exp.title%>">
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="flex-row">
+                <div class="half">
+                    <p>Image URL:</p>
+                </div>
+                <div class="half">
+                    <input type="text" name="title" value="<%=exp.img%>">
                 </div>
             </div>
             <!-- place -->
@@ -61,14 +67,15 @@
                     Tell a Story:
                 </div>
                 <div class="half">
-                <textarea name="story" form="editForm" value="<%=exp.story%>"></textarea>
+                <textarea name="story" form="editForm" placeholder="<%=exp.story%>"></textarea>
                 </div>
             </div>
              <!--End  -->
-            <input type="submit" value="Save Changes" class="sub-btn">
-            <br>
-            <br>
-            <a href="/session/<%=exp.id%>/delete" class="btn">Delete Story</a>
+             <div class="row center">
+              <input type="submit" value="Save Changes" class="sub-btn">
+                <a href="/session/<%=exp.id%>/delete" class="btn">Delete Story</a>   
+             </div>
+            
         </form>
     </div>
 </body>

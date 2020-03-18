@@ -11,9 +11,9 @@ router.get('/seed', (req, res) => {
     Exp.create(
         [
             {
-                title: 'Bowling and Dancing',
+                title: 'Bowling',
                 img:'/imgs/bowling.jpg',
-                location: ['Bowl Stars'],
+                location: ['Bowlig Alley'],
                 people: ['JC', 'Tim', 'Paul', 'Kat'],
                 important: ['Bowling'],
                 story: 'We did someting Exciting!'
@@ -39,7 +39,7 @@ router.get('/seed', (req, res) => {
                 img:'/imgs/festival.jpg',
                 location: ['MoonShinerz'],
                 people: ['Justin', 'Mika', 'Mercedes', 'Kate'],
-                important: ['dancing','Drinking','Singing'],
+                important: ['Dancing','Drinking','Singing'],
                 story: 'We did someting Exciting! Yay for us.... '
             },
             {
@@ -55,7 +55,7 @@ router.get('/seed', (req, res) => {
                 img:'/imgs/swimming.jpg',
                 location: ['Lakeshore Lake'],
                 people: ['Axel', 'Kato', 'Krystal', 'Caitlyn'],
-                important: ['swimming', 'Drinking','Music'],
+                important: ['Swimming', 'Drinking','Music'],
                 story: 'There is a really great lake just down the road from the burger shack that has a great diving spot and plenty of space to grill out! '
             },
             {
@@ -63,7 +63,7 @@ router.get('/seed', (req, res) => {
                 img:'/imgs/exploring.jpg',
                 location: ['Summerville'],
                 people: ['Shelly'],
-                important: ['swimming', 'exploring','hiking'],
+                important: ['Swimming', 'Exploring','Hiking'],
                 story: 'Found an amazing paradise hide out that was so beautiful to explore! '
             },
             {
@@ -71,13 +71,20 @@ router.get('/seed', (req, res) => {
                 img:'/imgs/park.jpg',
                 location: ['Ceremonial Park'],
                 people: ['none'],
-                important: ['swimming', 'Drinking','Music'],
+                important: ['Swimming', 'Drinking','Music'],
                 story: 'Really enjoyed a nice walk in the park this evening! Beautiful leaves! '
             },
         ], (err, data) => {
             res.redirect('/session')
         }
     )
+})
+
+// search -------------------!!!!!!!!!!!!!!!!!!!!
+router.get('/showDb', (req, res) => {
+    Exp.find({}, (err, data) => {
+        res.send(data)
+    })
 })
 
 // Delete All
@@ -139,13 +146,6 @@ router.post('/add', (req, res) => {
 
 
 
-// search -------------------!!!!!!!!!!!!!!!!!!!!
-router.get('/showDb', (req, res) => {
-    Exp.find({}, (err, data) => {
-        res.send(data)
-    })
-})
-
 // Edit Story
 router.get('/:id/edit',(req,res)=>{
     Exp.findById(req.params.id,(err,data)=>{
@@ -158,8 +158,8 @@ router.get('/:id/edit',(req,res)=>{
 })
         // POST 
 router.post('/:id/edit', (req, res) => {
-    Exp.findByIdAndUpdate(req.params.id, req.body,{new:false}, (err, data) => {
-       res.redirect('/session')
+    Exp.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, data) => {
+       res.redirect('/session');
     })
 })
 
