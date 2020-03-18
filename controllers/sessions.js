@@ -60,7 +60,7 @@ router.get('/seed', (req, res) => {
             },
             {
                 title: 'Exploring',
-                img:'/imgs/exploring.jpg',
+                img:'https://images.unsplash.com/photo-1504648177405-4dcbabb49038?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
                 location: ['Summerville'],
                 people: ['Shelly'],
                 important: ['Swimming', 'Exploring','Hiking'],

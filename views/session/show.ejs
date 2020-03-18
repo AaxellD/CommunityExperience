@@ -31,20 +31,24 @@
       </div>
 
       <!-- CARD LOCATIONS -->
-      <div class="flex-row">
-
-        <h3>Locations:</h3>
-        <ul>
+      <div class="row center">
+        <div class="left">
+          <h3>Locations:</h3>
+        </div>
+        <div class="right">
           <% for (let x in exp.location) { %>
           <li> <%=exp.location[x]%> </li>
           <% } %>
-        </ul>
+        </div>
+      
       </div>
 
       <!-- CARD PEOPLE -->
-      <div class="flex-row">
-        <h3>Friends: </h3>
-        <ul>
+      <div class="row center">
+        <div class="left">
+          <h3>Friends: </h3>
+        </div>
+        <ul class="right">
           <% for (let x in exp.people) { %>
           <li> <%=exp.people[x]%> </li>
           <% } %>
@@ -54,8 +58,10 @@
 
       <!-- CARD ACTIVITIES -->
       <div class="flex-row">
-        <h3>Activities</h3>
-        <ul>
+        <div class="left">
+          <h3>Activities</h3>
+        </div>
+        <ul class="right">
           <% for (let x in exp.important) {%>
           <li><%=exp.important[x]%></li>
           <%} %>
