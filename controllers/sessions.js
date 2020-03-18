@@ -97,6 +97,11 @@ router.get('/deleteAll', (req, res) => {
 
 // // ====== Routes======== // //
 
+// Login Page
+router.get('/new', (req, res) => {
+    res.render('session/new.ejs')
+});
+
 //  Home
 router.get('/', (req, res) => {
     Exp.find({}, (err, allExp) => {
@@ -109,10 +114,6 @@ router.get('/', (req, res) => {
     })
 })
 
-// Login Page
-router.get('/new', (req, res) => {
-    res.render('session/new.ejs')
-});
 
 // login redirect to session home page
 router.post('/', (req, res) => {
@@ -144,7 +145,7 @@ router.post('/add', (req, res) => {
     })
 })
 
-
+// -------- BY ID --------///
 
 // Edit Story
 router.get('/:id/edit',(req,res)=>{
